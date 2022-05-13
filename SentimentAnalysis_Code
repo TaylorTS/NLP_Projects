@@ -51,6 +51,7 @@ corpus[3]
 corpus[2]
 
 #create a column that shows whether the review is positive, negative or neutral
+from textblob import TextBlob
 df['review'] = corpus
 def subjectivity(text):
 	return TextBlob(text).sentiment.subjectivity
